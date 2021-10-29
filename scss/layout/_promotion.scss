@@ -1,0 +1,52 @@
+// ===== SECTION PROMOTION STYLE ===== //
+.promotion {
+  padding: 2rem 0;
+  background: {
+    image: url(../../img/bcg/beer-bcg3.jpg);
+  }
+
+  // DESC
+  .section-desc {
+    @include wrapper(90%, 0 auto);
+    margin-top: 2rem;
+    color: set-text-color(#000);
+  }
+}
+
+// BODY
+.promotion-body {
+  @include wrapper(90%, 3rem auto 1rem);
+}
+
+// DEADLINE
+.promotion-deadline {
+  display: flex;
+  gap: 2rem;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+
+  // MEDIA QUERY
+  @include laptop {
+    justify-content: center;
+  }
+
+  &__format {
+    background-color: $red;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+
+    // MEDIA QUERY
+    @include laptop {
+      padding: 1rem;
+    }
+
+    h4 {
+      color: set-text-color(#000);
+      font-size: 1.5rem;
+    }
+  }
+}

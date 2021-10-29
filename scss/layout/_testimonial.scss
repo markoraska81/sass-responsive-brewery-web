@@ -1,0 +1,39 @@
+// =====  SECTION TESTIMONIAL STYLE ===== //
+// BODY
+.testimonial-body {
+  @include wrapper(80%, 4rem auto);
+
+  // MEDIA QUERY
+  @include laptop {
+    max-width: 60%;
+  }
+}
+
+// BOX
+.testimonial-box {
+  text-align: center;
+
+  article {
+    i {
+      color: $red;
+      font-size: 2rem;
+
+      // MEDIA QUERY
+      @include laptop {
+        font-size: 2.5rem;
+      }
+    }
+
+    h4 {
+      text-transform: capitalize;
+      text-align: right;
+    }
+  }
+}
+
+// TESTIMONIAL-BTN
+.testimonial-btn {
+  @include flexBox(center, center);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}

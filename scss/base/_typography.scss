@@ -1,0 +1,61 @@
+@import './config';
+
+// ===== TYPOGRAPHY STYLE ===== //
+
+// SECTION HEADING
+.section-heading {
+  @include wrapper(90%, 0 auto);
+}
+
+// BANNER TITLE
+.banner-title,
+.section-title {
+  font-size: clamp(1rem, -1.5rem + 8vw, 1.8rem);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #fff;
+  font-family: $robotoSlab;
+}
+
+// BANNER SUBTITLE
+.banner-subtitle,
+.section-subtitle {
+  font-size: clamp(2rem, calc(5vw + 1rem), 4rem);
+  color: #fff;
+  line-height: 1;
+  font-weight: 600;
+  font-family: $russoOne;
+  letter-spacing: 2px;
+}
+
+// INFO & TESTIMONIAL TITLE
+.info-title,
+.testimonial-title {
+  height: 3rem;
+  font-size: clamp(1.15rem, calc(5vw + 1rem), 1.3rem);
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.15rem;
+  font-family: $robotoSlab;
+  color: #35424a;
+}
+
+// BEER TITLE
+.beer-title {
+  @extend .info-title;
+  position: absolute;
+  font-size: 1.15rem;
+  bottom: 40px;
+  left: 40px;
+  color: set-text-color(#000);
+  text-transform: uppercase;
+}
+
+// TAP ROOM TITLE
+.article-title {
+  font-size: 1.3rem;
+  font-family: $robotoSlab;
+  text-transform: uppercase;
+}

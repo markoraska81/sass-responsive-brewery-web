@@ -1,0 +1,69 @@
+// HEADER
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+  z-index: 99;
+
+  // MEDIA QUERY
+  @include laptop {
+    padding: 1.5rem 0;
+  }
+}
+
+// NAVBAR STYLE
+.navbar {
+  @include wrapper(90%, 0 auto);
+  @include flexBox(space-between, center);
+
+  // NAVBAR MENU
+  &-menu {
+    display: none;
+
+    // MEDIA QUERY
+    @include laptop {
+      @include flexBox(center, center);
+      gap: 1rem;
+    }
+
+    &__link {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: $ease-in-out;
+
+      &.active {
+        color: $red;
+      }
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+
+  // NAVBAR BTN
+  &-btn {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    z-index: 9999999999999;
+
+    // MEDIA QUERY
+    @include laptop {
+      display: none;
+    }
+
+    &__line {
+      width: 30px;
+      height: 3px;
+      margin: 0 0 5px 0;
+      background-color: #fff;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

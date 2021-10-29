@@ -1,0 +1,97 @@
+// ===== SECTION CONTACT STYLE ===== //
+// BODY
+.contact-body {
+  @include wrapper(90%, 3rem auto 1rem);
+
+  // INFO
+  &__info {
+    @include flexBox(center, flex-start);
+    flex-direction: column;
+    gap: 5rem;
+
+    // MEDIA QUERY
+    @include laptop {
+      align-items: center;
+      flex-direction: row;
+      max-width: 80rem;
+      margin: 5rem auto 0;
+      gap: 0.5rem;
+    }
+
+    // LOCATION
+    .location {
+      width: 100%;
+      margin-top: 2rem;
+
+      // MEDIA QUERY
+      @include laptop {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      @include desktop {
+        width: 50%;
+      }
+
+      .info {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        // MEDIA QUERY
+        @include laptop {
+          font-size: 1.35rem;
+        }
+
+        .fas,
+        .far,
+        .fab {
+          color: $red;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+// FORM
+form {
+  width: 100%;
+
+  @include laptop {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  @include desktop {
+    width: 50%;
+  }
+
+  input,
+  textarea {
+    display: block;
+    padding: 0.75rem;
+    width: 100%;
+    background-color: #fbfbfc;
+    border: 1px solid #e8e9eb;
+    font-size: 1.2rem;
+    outline: none;
+    margin-bottom: 1rem;
+
+    &::placeholder {
+      color: #bdbcbc;
+    }
+  }
+
+  textarea {
+    min-height: 10em;
+    resize: none;
+
+    &::placeholder {
+      font-size: 1.5rem;
+    }
+  }
+}

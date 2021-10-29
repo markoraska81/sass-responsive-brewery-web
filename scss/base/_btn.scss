@@ -1,0 +1,51 @@
+// ===== BTN STYLE ===== //
+.btn-read,
+.btn-filter {
+  position: relative;
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-style: normal;
+  color: #fff;
+  background-color: $red;
+  border-color: #ffffff;
+  padding: 1rem 1.5rem;
+  font-family: $robotoSlab;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  border: none;
+
+  // MEDIA QUERY
+  @include laptop {
+    font-size: 1.1rem;
+  }
+
+  &:hover::before {
+    border-color: $red;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    bottom: 4px;
+    right: 4px;
+    border: 4px solid;
+    border-color: inherit;
+    transition: $linear;
+  }
+}
+
+// BTN TAB
+.btn-tab {
+  margin-top: 2rem;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+
+  &.active {
+    color: $red;
+  }
+}

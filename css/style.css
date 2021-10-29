@@ -1,0 +1,747 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f6f6f6;
+  color: #35424a;
+  line-height: 1.5;
+  font-size: 1rem;
+  font-family: "Raleway", sans-serif;
+  overflow-x: hidden;
+}
+
+section {
+  margin-top: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.spacing-top * + * {
+  margin-top: 1rem;
+}
+
+.spacing-bottom * + * {
+  margin-bottom: 1rem;
+}
+
+.section-heading {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.banner-title,
+.section-title {
+  font-size: clamp(1rem, -1.5rem + 8vw, 1.8rem);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #fff;
+  font-family: "Roboto Slab", serif;
+}
+
+.banner-subtitle,
+.section-subtitle {
+  font-size: clamp(2rem, 5vw + 1rem, 4rem);
+  color: #fff;
+  line-height: 1;
+  font-weight: 600;
+  font-family: "Russo One", sans-serif;
+  letter-spacing: 2px;
+}
+
+.info-title, .beer-title,
+.testimonial-title {
+  height: 3rem;
+  font-size: clamp(1.15rem, 5vw + 1rem, 1.3rem);
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.15rem;
+  font-family: "Roboto Slab", serif;
+  color: #35424a;
+}
+
+.beer-title {
+  position: absolute;
+  font-size: 1.15rem;
+  bottom: 40px;
+  left: 40px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.article-title {
+  font-size: 1.3rem;
+  font-family: "Roboto Slab", serif;
+  text-transform: uppercase;
+}
+
+.bcg-header {
+  background-color: black;
+  color: #fff;
+}
+.bcg-about h2, .bcg-beers h2, .bcg-gallery h2, .bcg-testimonial h2, .bcg-contact h2 {
+  color: #35424a;
+}
+.bcg-footer {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-read,
+.btn-filter {
+  position: relative;
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-style: normal;
+  color: #fff;
+  background-color: #ed1c24;
+  border-color: #ffffff;
+  padding: 1rem 1.5rem;
+  font-family: "Roboto Slab", serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+@media (min-width: 1024px) {
+  .btn-read,
+.btn-filter {
+    font-size: 1.1rem;
+  }
+}
+.btn-read:hover::before,
+.btn-filter:hover::before {
+  border-color: #ed1c24;
+}
+.btn-read::before,
+.btn-filter::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  right: 4px;
+  border: 4px solid;
+  border-color: inherit;
+  transition: all 0.4s linear;
+}
+
+.btn-tab {
+  margin-top: 2rem;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+}
+.btn-tab.active {
+  color: #ed1c24;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 0;
+  z-index: 99;
+}
+@media (min-width: 1024px) {
+  .header {
+    padding: 1.5rem 0;
+  }
+}
+
+.navbar {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-menu {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .navbar-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+.navbar-menu__link {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.4s ease-in-out;
+}
+.navbar-menu__link.active {
+  color: #ed1c24;
+}
+.navbar-menu__link:hover {
+  color: #ed1c24;
+}
+.navbar-btn {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  z-index: 9999999999999;
+}
+@media (min-width: 1024px) {
+  .navbar-btn {
+    display: none;
+  }
+}
+.navbar-btn__line {
+  width: 30px;
+  height: 3px;
+  margin: 0 0 5px 0;
+  background-color: #fff;
+}
+.navbar-btn__line:last-child {
+  margin-bottom: 0;
+}
+
+.home {
+  background-image: url(../../img/bcg/beer-bcg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-blend-mode: overlay;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
+}
+.home-body {
+  position: relative;
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+.home-body__banner {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.about {
+  width: 100%;
+  max-width: 90%;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media (min-width: 1024px) {
+  .about {
+    align-items: flex-start;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1024px) {
+  .about-heading {
+    width: 40%;
+    margin-top: 5rem;
+  }
+}
+.about-body .section-heading {
+  max-width: unset;
+}
+@media (min-width: 1024px) {
+  .about-body {
+    width: 60%;
+  }
+}
+
+.section-heading {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.section-heading__title {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.section-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.section-info .info {
+  padding: 1.5rem;
+  box-shadow: 0 1px 5px rgba(155, 61, 61, 0.85);
+}
+@media (min-width: 768px) {
+  .section-info .info {
+    width: 48%;
+  }
+}
+.section-info .info-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+.section-info .info i {
+  font-size: 2rem;
+  color: #ed1c24;
+}
+
+.special {
+  background-image: url(../../img//bcg/beer-bcg3.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: overlay;
+  padding: 2rem 0;
+}
+.special .section-desc {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  color: #fff;
+}
+
+.special-body {
+  width: 100%;
+  max-width: 90%;
+  margin: 3rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.special-body i {
+  font-size: 2rem;
+  color: #fff;
+}
+.special-body__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 0 2rem;
+}
+
+.special-btn {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+@media (min-width: 1024px) {
+  .special-btn {
+    justify-content: flex-start;
+  }
+}
+
+.beers-body {
+  margin: 3rem 0;
+}
+.beers-btn {
+  width: 100%;
+  max-width: 90%;
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+.beers-box {
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media (min-width: 500px) {
+  .beers-box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+.beers-box .beer {
+  position: relative;
+  width: 100%;
+  padding: 2rem 1rem;
+  background: linear-gradient(#fcfbfb, #f7f5f5);
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .beers-box .beer {
+    width: 48%;
+  }
+}
+@media (min-width: 1024px) {
+  .beers-box .beer {
+    width: 32%;
+  }
+}
+.beers-box .beer:hover, .beers-box .beer:focus {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.85);
+  transform: scale(1.01);
+}
+.beers-box .beer::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10rem;
+  content: " ";
+  background-color: transparent;
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+}
+.beers .btn-box {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.tap-room {
+  padding: 2rem 0;
+  background-image: url(../../img/bcg/beer-bcg3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: overlay;
+}
+.tap-room__body {
+  width: 100%;
+  max-width: 90%;
+  margin: 3rem auto;
+  color: #fff;
+}
+.tap-room__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.tap-room__box article {
+  flex-basis: 30%;
+  min-width: 20rem;
+  overflow: hidden;
+  text-align: center;
+}
+
+.gallery-body {
+  width: 100%;
+  max-width: 90%;
+  margin: 3rem auto;
+}
+.gallery-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 2rem 0 0;
+}
+@media (min-width: 768px) {
+  .gallery-box {
+    flex-direction: row;
+  }
+}
+.gallery-box .img-box {
+  position: relative;
+  background-color: #ed1c24;
+  overflow: hidden;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .gallery-box .img-box {
+    width: 50%;
+  }
+}
+@media (min-width: 1024px) {
+  .gallery-box .img-box {
+    width: 33.33%;
+  }
+}
+@media (min-width: 1200px) {
+  .gallery-box .img-box {
+    width: 25%;
+  }
+}
+.gallery-box .img-box:focus, .gallery-box .img-box:hover {
+  position: relative;
+  z-index: 1;
+}
+.gallery-box .img-box:focus, .gallery-box .img-box:hover img {
+  transform: scale(1.1);
+  opacity: 0.5;
+}
+.gallery-box .img-box::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #ed1c24;
+  opacity: 0;
+}
+.gallery-box .img-box::after:hover::after {
+  top: 0;
+  opacity: 0.7;
+}
+.gallery-box .img-box img {
+  transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
+}
+.gallery-box .img-box img:hover {
+  transform: scale(1.1);
+  opacity: 0.5;
+}
+
+.testimonial-body {
+  width: 100%;
+  max-width: 80%;
+  margin: 4rem auto;
+}
+@media (min-width: 1024px) {
+  .testimonial-body {
+    max-width: 60%;
+  }
+}
+
+.testimonial-box {
+  text-align: center;
+}
+.testimonial-box article i {
+  color: #ed1c24;
+  font-size: 2rem;
+}
+@media (min-width: 1024px) {
+  .testimonial-box article i {
+    font-size: 2.5rem;
+  }
+}
+.testimonial-box article h4 {
+  text-transform: capitalize;
+  text-align: right;
+}
+
+.testimonial-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.promotion {
+  padding: 2rem 0;
+  background-image: url(../../img/bcg/beer-bcg3.jpg);
+}
+.promotion .section-desc {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  color: #fff;
+}
+
+.promotion-body {
+  width: 100%;
+  max-width: 90%;
+  margin: 3rem auto 1rem;
+}
+
+.promotion-deadline {
+  display: flex;
+  gap: 2rem;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+@media (min-width: 1024px) {
+  .promotion-deadline {
+    justify-content: center;
+  }
+}
+.promotion-deadline__format {
+  background-color: #ed1c24;
+  padding: 0.5rem;
+  border-radius: 0.4rem;
+}
+@media (min-width: 1024px) {
+  .promotion-deadline__format {
+    padding: 1rem;
+  }
+}
+.promotion-deadline__format h4 {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.contact-body {
+  width: 100%;
+  max-width: 90%;
+  margin: 3rem auto 1rem;
+}
+.contact-body__info {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5rem;
+}
+@media (min-width: 1024px) {
+  .contact-body__info {
+    align-items: center;
+    flex-direction: row;
+    max-width: 80rem;
+    margin: 5rem auto 0;
+    gap: 0.5rem;
+  }
+}
+.contact-body__info .location {
+  width: 100%;
+  margin-top: 2rem;
+}
+@media (min-width: 1024px) {
+  .contact-body__info .location {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .contact-body__info .location {
+    width: 50%;
+  }
+}
+.contact-body__info .location .info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+@media (min-width: 1024px) {
+  .contact-body__info .location .info {
+    font-size: 1.35rem;
+  }
+}
+.contact-body__info .location .info .fas,
+.contact-body__info .location .info .far,
+.contact-body__info .location .info .fab {
+  color: #ed1c24;
+}
+.contact-body__info .location .info:last-child {
+  margin-bottom: 0;
+}
+
+form {
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  form {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  form {
+    width: 50%;
+  }
+}
+form input,
+form textarea {
+  display: block;
+  padding: 0.75rem;
+  width: 100%;
+  background-color: #fbfbfc;
+  border: 1px solid #e8e9eb;
+  font-size: 1.2rem;
+  outline: none;
+  margin-bottom: 1rem;
+}
+form input::placeholder,
+form textarea::placeholder {
+  color: #bdbcbc;
+}
+form textarea {
+  min-height: 10em;
+  resize: none;
+}
+form textarea::placeholder {
+  font-size: 1.5rem;
+}
+
+.footer {
+  padding: 1rem 0;
+  text-transform: capitalize;
+}
+
+.copyright {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=style.css.map */

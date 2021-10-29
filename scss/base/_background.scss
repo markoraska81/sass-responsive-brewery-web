@@ -1,0 +1,25 @@
+@import './config';
+
+// ===== BACKGROUND STYLE ===== //
+.bcg {
+  // HEADER
+  &-header {
+    @include set-background(rgba(#000, 85));
+  }
+
+  // ABOUT, BEERS, GALLERY
+  &-about,
+  &-beers,
+  &-gallery,
+  &-testimonial,
+  &-contact {
+    h2 {
+      color: set-text-color(#fff);
+    }
+  }
+
+  // FOOTER
+  &-footer {
+    @include set-background(#000);
+  }
+}

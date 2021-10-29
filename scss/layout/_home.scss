@@ -1,0 +1,26 @@
+// ===== SECTION HOME STYLE ===== //
+
+// HOME
+.home {
+  background: {
+    image: url(../../img/bcg/beer-bcg.jpg);
+    position: center;
+    size: cover;
+    color: rgba(0, 0, 0, 0.2);
+    blend-mode: overlay;
+  }
+  min-height: 100vh;
+  @include flexBox(center, center);
+  flex-direction: column;
+  text-align: left;
+
+  &-body {
+    position: relative;
+    @include wrapper(90%, 0 auto);
+  }
+
+  &-body__banner {
+    @include flexBox(center, flex-start);
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,32 @@
+// ===== SECTION TAP ROOM STYLE ===== //
+.tap-room {
+  padding: 2rem 0;
+  background: {
+    image: url(../../img/bcg/beer-bcg3.jpg);
+    size: cover;
+    repeat: no-repeat;
+    position: top;
+    color: rgba(0, 0, 0, 0.6);
+    blend-mode: overlay;
+  }
+
+  // BODY
+  &__body {
+    @include wrapper(90%, 3rem auto);
+    color: set-text-color(#000);
+  }
+
+  // BOX
+  &__box {
+    @include flexBox(center, center);
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    article {
+      flex-basis: 30%;
+      min-width: 20rem;
+      overflow: hidden;
+      text-align: center;
+    }
+  }
+}

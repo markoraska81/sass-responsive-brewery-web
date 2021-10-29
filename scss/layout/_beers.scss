@@ -1,0 +1,73 @@
+// ===== SECTIONS BEERS STYLE ===== //
+.beers {
+  // BODY
+  &-body {
+    margin: 3rem 0;
+  }
+
+  // BEERS BTN
+  &-btn {
+    @include wrapper(90%, 2rem auto);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+
+  // BEERS BOX
+  &-box {
+    @include wrapper(80%, 0 auto);
+    @include flexBox(center, center);
+    flex-direction: column;
+    gap: 1.5rem;
+
+    // MEDIA QUERY
+    @include mobile {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    // BEER
+    .beer {
+      position: relative;
+      width: 100%;
+      padding: 2rem 1rem;
+      background: linear-gradient(#fcfbfb, #f7f5f5);
+      transition: all 0.5s ease;
+      cursor: pointer;
+
+      // MEDIA QUERY
+      @include tablet {
+        width: 48%;
+      }
+
+      @include laptop {
+        width: 32%;
+      }
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.85);
+        transform: scale(1.01);
+      }
+
+      &::before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 10rem;
+        content: ' ';
+        background-color: transparent;
+        background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+      }
+    }
+  }
+
+  // BTN BOX
+  .btn-box {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+}

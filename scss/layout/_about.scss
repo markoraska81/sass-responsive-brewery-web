@@ -1,0 +1,74 @@
+// ===== SECTION ABOUT STYLE ===== //
+.about {
+  @include wrapper(90%, 2rem auto);
+  @include flexBox(space-between, center);
+  flex-direction: column;
+  gap: 2rem;
+
+  // MEDIA QUERY
+  @include laptop {
+    align-items: flex-start;
+    flex-direction: row;
+  }
+
+  // HEADING
+  &-heading {
+    // MEDIA QUERY
+    @include laptop {
+      width: 40%;
+      margin-top: 5rem;
+    }
+  }
+
+  // BODY
+  &-body {
+    .section-heading {
+      max-width: unset;
+    }
+    // MEDIA QUERY
+    @include laptop {
+      width: 60%;
+    }
+  }
+}
+// SECTION HEADING
+.section-heading {
+  @include flexBox(center, flex-start);
+  flex-direction: column;
+}
+
+.section-heading__title {
+  @include flexBox(center, flex-start);
+  flex-direction: column;
+}
+
+// SECTION INFO
+.section-info {
+  @include flexBox(center, center);
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+
+  .info {
+    padding: 1.5rem;
+    box-shadow: 0 1px 5px rgb(155, 61, 61, 0.85);
+
+    // MEDIA QUeRY
+    @include tablet {
+      width: 48%;
+    }
+
+    &-heading {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    i {
+      font-size: 2rem;
+      color: #ed1c24;
+    }
+  }
+}

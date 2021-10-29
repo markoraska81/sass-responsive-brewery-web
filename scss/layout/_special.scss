@@ -1,0 +1,50 @@
+// ===== SECTION SPECIAL STYLE ===== //
+.special {
+  background: {
+    image: url(../../img//bcg/beer-bcg3.jpg);
+    position: top;
+    repeat: no-repeat;
+    size: cover;
+    color: rgba(0, 0, 0, 0.6);
+    blend-mode: overlay;
+  }
+  padding: 2rem 0;
+
+  // DESC
+  .section-desc {
+    @include wrapper(90%, 0 auto);
+    margin-top: 2rem;
+    color: set-text-color(#000);
+  }
+}
+
+// SPECIAL BODY
+.special-body {
+  @include wrapper(90%, 3rem auto);
+  @include flexBox(center, center);
+
+  i {
+    font-size: 2rem;
+    color: set-text-color(#000);
+  }
+
+  &__box {
+    @include flexBox(center, center);
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 0 2rem;
+  }
+}
+
+// SPECIAL BTN
+.special-btn {
+  @include wrapper(90%, 0 auto);
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+
+  // MEDIA QUERY
+  @include laptop {
+    justify-content: flex-start;
+  }
+}

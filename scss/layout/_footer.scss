@@ -1,0 +1,8 @@
+// ===== FOOTER STYLE ===== //
+.footer {
+  padding: 1rem 0;
+  text-transform: capitalize;
+}
+.copyright {
+  @include wrapper(90%, 0 auto);
+}
